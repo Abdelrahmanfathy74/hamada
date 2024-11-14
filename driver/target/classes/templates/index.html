@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+
+<h1>Index page access by users</h1>
+
+<div sec:authorize='hasAuthority("ADMIN")'>This content is only shown
+    to administrators.§§</div>
+
+<div sec:authorize='hasAuthority("USERS")'>This content is only shown
+    to USERS.§§</div>
+</body>
+</html>
